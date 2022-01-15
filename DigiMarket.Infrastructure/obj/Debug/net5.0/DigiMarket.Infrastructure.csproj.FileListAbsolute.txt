@@ -1,0 +1,12 @@
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\bin\Debug\net5.0\DigiMarket.Infrastructure.deps.json
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\bin\Debug\net5.0\DigiMarket.Infrastructure.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\bin\Debug\net5.0\ref\DigiMarket.Infrastructure.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\bin\Debug\net5.0\DigiMarket.Infrastructure.pdb
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.AssemblyInfo.cs
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\ref\DigiMarket.Infrastructure.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Infrastructure\obj\Debug\net5.0\DigiMarket.Infrastructure.pdb

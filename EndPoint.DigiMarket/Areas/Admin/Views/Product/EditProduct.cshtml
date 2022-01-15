@@ -1,0 +1,457 @@
+﻿@model DigiMarket.Application.Services.Products.Queries.GetProductDetailForAdmin.ProductDetailDto
+@addTagHelper *, LazZiya.TagHelpers
+
+@{
+    ViewData["Title"] = "EditProduct";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@using System.Linq
+@using EndPoint.DigiMarket
+@using EndPoint.DigiMarket.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+    <input id="Id" type="hidden" asp-for="ProductId" />
+    <section class="basic-elements">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="content-header">فرم ثبت محصول جدید</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title-wrap bar-success">
+                            <h4 class="card-title mb-0">اطلاعات محصول جدید را وارد نمایید</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="px-3">
+                            <div class="form">
+                                <div class="form-body">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput">نام محصول </label>
+                                                <input  asp-for="Name" type="text" class="form-control" id="Name">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> برند </label>
+                                                <input  asp-for="Brand" type="text" class="form-control" id="Brand">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> قیمت</label>
+                                                <input asp-for="Price" type="number" class="form-control" id="Price">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> تعداد موجودی</label>
+                                                <input asp-for="Inventory" type="number" class="form-control" id="Inventory">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput">نمایش داده شود؟ </label>
+                                                <input  asp-for="Displayed" type="checkbox" class="form-control" id="Displayed">
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-xl-4 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput">دسته بندی </label>
+
+                                                <select asp-for="Category" class="form-control" id="Category" asp-items="@ViewBag.Category"></select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> توضیحات</label>
+                                                <textarea  asp-for="Description" id="Description" class="form-control " rows="5"></textarea>
+                                            </fieldset>
+                                        </div>
+                                        <hr />
+                                        <hr />
+                                        <br class="clear" />
+
+
+
+
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4 col-md-12 mb-1">
+                                                    <fieldset class="form-group">
+                                                        <label for="basicInput">تصاویر </label>
+                                                        <div class="col-8 col-sm-8 text-center">
+
+                                                            @foreach (var item in Model.ProductDetailImage)
+                                                            {
+                                                                <figure class="d-inline col-xl-6 col-lg-4 col-sm-6 col-12">
+                                                                    <a>
+                                                                        <img width="200" height="200" class="img-thumbnail img-fluid" src="~/@item.Src">
+                                                                        <button class="btn btn-danger mt-2" onclick="DeleteImage('@item.Id')"> حذف عکس</button>
+                                                                    </a>
+                                                                </figure>
+                                                            }
+
+
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+
+                                                <div class="col-xl-4 col-lg-4 col-md-12 mb-1">
+                                                    <ul class="no-list-style pr-0 text-right fa-bold">
+                                                        @foreach (var item in Model.ProductDetailFeature)
+                                                        {
+                                                            <li class="mb-2">
+                                                                <span class="text-bold-500 primary"><a><i class="icon-frame font-small-3"></i> @item.DisplayName :</a></span>
+                                                                <span class="display-block overflow-hidden"> @item.Value</span>
+                                                                <button class="btn btn-sm btn-danger mt-2 " onclick="DeleteFeature('@item.Id')"> حذف ویژگی</button>
+                                                             
+                                                            </li>
+                                                        }
+                                                    </ul>
+                                                </div>
+
+
+
+
+                                                <div class="col-xl-4 col-lg-4 col-md-12 mb-1">
+                                                    <fieldset class="form-group">
+                                                        <label for="basicInput">آپلود تصویر جدید </label>
+                                                        <input  type="file" multiple class="form-control" accept="image/*" id="Images">
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+                                        <br class="clear" />
+
+                                        <hr />
+                                        <hr />
+
+
+
+
+                                        <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> نام ویژگی </label>
+                                                <input type="text" class="form-control" id="txtDisplayName" placeholder="نام ویژگی" />
+                                            </fieldset>
+                                        </div>
+
+                                        <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <label for="basicInput"> مقدار ویژگی </label>
+                                                <input type="text" class="form-control" id="txtValue" placeholder="مقدار ویژگی" />
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-6 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <br />
+                                                <a class="btn btn-success" id="btnAddFeatures">افزودن</a>
+                                            </fieldset>
+                                        </div>
+
+
+
+
+
+
+                                        <br class="clear" />
+
+                                        <table id="tbl_Features" class="col-md-12 table table-bordered table-hover  table-condensed table-responsive">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        نام ویژگی
+                                                    </th>
+                                                    <th>
+                                                        مقدار ویژگی
+                                                    </th>
+                                                    <th>
+
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+
+
+
+
+
+
+
+                                        <div class="col-xl-12 col-lg-12 col-md-12 mb-1">
+                                            <fieldset class="form-group">
+                                                <br />
+                                                <a id="btnAddProduct" class="btn btn-success col-md-12"> ویرایش محصول  </a>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+@section Script
+{
+
+    @*Refrence js And Css - alert (sweetalert)*@
+
+    <link href="~/Sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <script src="~/Sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+
+
+        function DeleteImage(Id) {
+            swal.fire({
+                title: '   حذف عکس ',
+                text: "کاربر گرامی از حذف عکس مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ، عکس حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'Id': Id,
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/product/DeleteProductImage",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            } else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+                    });
+
+                }
+            });
+        }
+
+
+    </script>
+
+    <script>
+        function DeleteFeature(Id) {
+            swal.fire({
+                title: '   حذف ویژگی ',
+                text: "کاربر گرامی از حذف ویژگی مطمئن هستید؟",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#7cacbe',
+                confirmButtonText: 'بله ، ویژگی حذف شود',
+                cancelButtonText: 'خیر'
+            }).then((result) => {
+                if (result.value) {
+                    var postData = {
+                        'Id': Id,
+                    };
+
+                    $.ajax({
+                        contentType: 'application/x-www-form-urlencoded',
+                        dataType: 'json',
+                        type: "POST",
+                        url: "/admin/product/DeleteProductFeature",
+                        data: postData,
+                        success: function (data) {
+                            if (data.isSuccess == true) {
+                                swal.fire(
+                                    'موفق!',
+                                    data.message,
+                                    'success'
+                                ).then(function (isConfirm) {
+                                    location.reload();
+                                });
+                            } else {
+
+                                swal.fire(
+                                    'هشدار!',
+                                    data.message,
+                                    'warning'
+                                );
+
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+
+                    });
+
+                }
+            });
+        }
+
+
+
+    </script>
+
+
+
+
+    <script>
+        //اضافه کردن ویژگی به جدول
+        $("#btnAddFeatures").on("click", function () {
+
+            var txtDisplayName = $("#txtDisplayName").val();
+            var txtValue = $("#txtValue").val();
+
+            if (txtDisplayName == "" || txtValue == "") {
+                swal.fire(
+                    'هشدار!',
+                    "نام و مقدار را باید وارد کنید",
+                    'warning'
+                );
+            }
+            else {
+                $('#tbl_Features tbody').append('<tr> <td>' + txtDisplayName + '</td>  <td>' + txtValue + '</td> <td> <a class="idFeatures btnDelete btn btn-danger"> حذف </a> </td> </tr>');
+                $("#txtDisplayName").val('');
+                $("#txtValue").val('');
+            }
+        });
+
+        $("#tbl_Features").on('click', '.idFeatures', function () {
+            $(this).closest('tr').remove();
+        });
+
+
+
+        $('#btnAddProduct').on('click', function () {
+
+            var data = new FormData();
+
+            //دریافت مقادیر از تکس باکس ها و....
+            data.append("Name", $("#Name").val());
+            data.append("Brand", $("#Brand").val());
+            data.append("ProductId", $("#Id").val());
+            data.append("Price", $("#Price").val());
+            data.append("Inventory", $("#Inventory").val());
+            data.append("Displayed", $("#Displayed").attr("checked") ? true : false);
+            data.append("CategoryId", $('#Category').find('option:selected').val());
+            data.append("Description", $("#Description").val());
+
+
+            //دریافت عکس های انتخاب شده توسط کاربر و قرار دادن عکس ها در متغیر data
+            var productImages = document.getElementById("Images");
+
+            if (productImages.files.length > 0) {
+                for (var i = 0; i < productImages.files.length; i++) {
+                    data.append('Images-' + i, productImages.files[i]);
+                }
+            }
+
+            //دریافت ویژگی های محصول از جدول
+            var dataFeaturesViewModel = $('#tbl_Features tr:gt(0)').map(function () {
+                return {
+                    DisplayName: $(this.cells[0]).text(),
+                    Value: $(this.cells[1]).text(),
+                };
+            }).get();
+
+            $.each(dataFeaturesViewModel, function (i, val) {
+                data.append('[' + i + '].DisplayName', val.DisplayName);
+                data.append('[' + i + '].Value', val.Value);
+
+            });
+
+
+
+
+
+            // ارسال اطلاعات بع کنترلر
+            var ajaxRequest = $.ajax({
+                type: "POST",
+                url: "EditProduct",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (data) {
+
+                    if (data.isSuccess == true) {
+
+                        swal.fire(
+                            'موفق!',
+                            data.message,
+                            'success'
+                        ).then(function (isConfirm) {
+                            window.location.href = "/Admin/Product/";
+
+                        });
+                    }
+                    else {
+
+                        swal.fire(
+                            'هشدار!',
+                            data.message,
+                            'warning'
+                        );
+                    }
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+
+            });
+
+            ajaxRequest.done(function (xhr, textStatus) {
+                // Do other operation
+            });
+        });
+    </script>
+
+}
+
+
+

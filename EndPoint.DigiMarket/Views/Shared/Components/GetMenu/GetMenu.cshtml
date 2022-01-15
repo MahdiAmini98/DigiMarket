@@ -1,0 +1,33 @@
+﻿
+@model List<DigiMarket.Application.Services.Common.Site.Queries.GetMenuItem.MenuItemDto>
+
+@{
+    Layout = null;
+}
+
+
+@foreach (var item in Model)
+{
+
+    <li id="nav-menu-item" class="menu-item nav-overlay">
+        <a href="#" class="current-link-menu">
+            @item.CategoryName
+        </a>
+
+        @if (item.ChildCategory.Count() > 0)
+        {
+            <ul class="sub-menu is-mega-menu-small">
+
+                @foreach (var itemChild in item.ChildCategory)
+                {
+                    <li class="menu-mega-item menu-item-type-mega-menu item-small">
+                        <a href="~/product/index?CatId=@itemChild.CategoryId" class="mega-menu-link">
+                            @itemChild.CategoryName
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+
+    </li>
+}

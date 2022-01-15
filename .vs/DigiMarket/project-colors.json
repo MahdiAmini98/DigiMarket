@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f223f9ee-8fdb-4182-9a63-5ffba716838c": {
+      "ProjectGuid": "f223f9ee-8fdb-4182-9a63-5ffba716838c",
+      "DisplayName": "DigiMarket.Application",
+      "ColorIndex": 0
+    },
+    "3bd97dc9-11a1-424b-8e62-4194327eb656": {
+      "ProjectGuid": "3bd97dc9-11a1-424b-8e62-4194327eb656",
+      "DisplayName": "DigiMarket.Persistence",
+      "ColorIndex": 1
+    },
+    "dff686f5-eaca-4366-9606-1af1c09d5615": {
+      "ProjectGuid": "dff686f5-eaca-4366-9606-1af1c09d5615",
+      "DisplayName": "EndPoint.DigiMarket",
+      "ColorIndex": 2
+    },
+    "315d402b-bea7-4e25-8fe7-a7a54d596814": {
+      "ProjectGuid": "315d402b-bea7-4e25-8fe7-a7a54d596814",
+      "DisplayName": "DigiMarket.Common",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "2707b5ea-13a3-4253-9510-c58401477ec7": {
+      "ProjectGuid": "2707b5ea-13a3-4253-9510-c58401477ec7",
+      "DisplayName": "DigiMarket.Domain",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

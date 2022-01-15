@@ -1,0 +1,17 @@
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Application.deps.json
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Application.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\ref\DigiMarket.Application.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Application.pdb
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Common.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Domain.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Common.pdb
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\bin\Debug\net5.0\DigiMarket.Domain.pdb
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.csproj.AssemblyReference.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.AssemblyInfoInputs.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.AssemblyInfo.cs
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.csproj.CoreCompileInputs.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.csproj.CopyComplete
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\ref\DigiMarket.Application.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Application\obj\Debug\net5.0\DigiMarket.Application.pdb

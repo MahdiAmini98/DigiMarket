@@ -1,0 +1,12 @@
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\bin\Debug\net5.0\DigiMarket.Common.deps.json
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\bin\Debug\net5.0\DigiMarket.Common.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\bin\Debug\net5.0\ref\DigiMarket.Common.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\bin\Debug\net5.0\DigiMarket.Common.pdb
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.csproj.AssemblyReference.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.AssemblyInfoInputs.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.AssemblyInfo.cs
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.csproj.CoreCompileInputs.cache
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\ref\DigiMarket.Common.dll
+C:\Users\Pacific\Documents\Programming\Asp.NetCore\DigiMarket\DigiMarket.Common\obj\Debug\net5.0\DigiMarket.Common.pdb
